@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost";
 // Enter your MySQL username below(default=root)
-$username = "<put your username here>";
+$username = "root";
 // Enter your MySQL password below
-$password = "<put your password here>";
-$dbname = "net_banking";
+$password = "";
+$dbname = "banking";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

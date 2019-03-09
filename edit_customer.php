@@ -11,6 +11,7 @@
     include "user_navbar.php";
     include "admin_sidebar.php";
     include "session_timeout.php";
+    
 
     if (isset($_GET['cust_id'])) {
         $_SESSION['cust_id'] = $_GET['cust_id'];

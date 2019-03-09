@@ -16,18 +16,19 @@
         $_SESSION['cust_id'] = $_GET['cust_id'];
     }
 
-    $fname = mysqli_real_escape_string($conn, $_POST["fname"]);
-    $lname = mysqli_real_escape_string($conn, $_POST["lname"]);
-    $dob = mysqli_real_escape_string($conn, $_POST["dob"]);
-    $aadhar = mysqli_real_escape_string($conn, $_POST["aadhar"]);
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $phno = mysqli_real_escape_string($conn, $_POST["phno"]);
-    $address = mysqli_real_escape_string($conn, $_POST["address"]);
-    $branch = mysqli_real_escape_string($conn, $_POST["branch"]);
-    $acno = mysqli_real_escape_string($conn, $_POST["acno"]);
-    $pin = mysqli_real_escape_string($conn, $_POST["pin"]);
-    $cus_uname = mysqli_real_escape_string($conn, $_POST["cus_uname"]);
-    $cus_pwd = mysqli_real_escape_string($conn, $_POST["cus_pwd"]);
+    $pass = hash('sha256',$_POST["cus_pwd"]);
+    $fname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["fname"])));
+    $lname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["lname"])));
+    $dob = mysqli_real_escape_string($conn, trim(stripslashes($_POST["dob"])));
+    $aadhar = mysqli_real_escape_string($conn, trim(stripslashes($_POST["aadhar"])));
+    $email = mysqli_real_escape_string($conn, trim(stripslashes($_POST["email"])));
+    $phno = mysqli_real_escape_string($conn, trim(stripslashes($_POST["phno"])));
+    $address = mysqli_real_escape_string($conn, trim(stripslashes($_POST["address"])));
+    $branch = mysqli_real_escape_string($conn, trim(stripslashes($_POST["branch"])));
+    $acno = mysqli_real_escape_string($conn, trim(stripslashes($_POST["acno"])));
+    $pin = mysqli_real_escape_string($conn, trim(stripslashes($_POST["pin"])));
+    $cus_uname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["cus_uname"])));
+    $cus_pwd = mysqli_real_escape_string($conn, $pass);
 
     $sql0 = "UPDATE customer SET first_name = '$fname',
                                  last_name = '$lname',

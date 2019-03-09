@@ -15,20 +15,26 @@
 </head>
 
 <?php
-$fname = mysqli_real_escape_string($conn, $_POST["fname"]);
-$lname = mysqli_real_escape_string($conn, $_POST["lname"]);
-$gender = mysqli_real_escape_string($conn, $_POST["gender"]);
-$dob = mysqli_real_escape_string($conn, $_POST["dob"]);
-$aadhar = mysqli_real_escape_string($conn, $_POST["aadhar"]);
-$email = mysqli_real_escape_string($conn, $_POST["email"]);
-$phno = mysqli_real_escape_string($conn, $_POST["phno"]);
-$address = mysqli_real_escape_string($conn, $_POST["address"]);
-$branch = mysqli_real_escape_string($conn, $_POST["branch"]);
-$acno = mysqli_real_escape_string($conn, $_POST["acno"]);
-$o_balance = mysqli_real_escape_string($conn, $_POST["o_balance"]);
-$pin = mysqli_real_escape_string($conn, $_POST["pin"]);
-$cus_uname = mysqli_real_escape_string($conn, $_POST["cus_uname"]);
-$cus_pwd = mysqli_real_escape_string($conn, $_POST["cus_pwd"]);
+
+$pass = hash('sha256',$_POST["cus_pwd"]);
+$salt = md5(random_int(1, 10000));
+
+
+
+$fname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["fname"])));
+$lname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["lname"])));
+$gender = mysqli_real_escape_string($conn, trim(stripslashes($_POST["gender"])));
+$dob = mysqli_real_escape_string($conn, trim(stripslashes($_POST["dob"])));
+$aadhar = mysqli_real_escape_string($conn, trim(stripslashes($_POST["aadhar"])));
+$email = mysqli_real_escape_string($conn, trim(stripslashes($_POST["email"])));
+$phno = mysqli_real_escape_string($conn, trim(stripslashes($_POST["phno"])));
+$address = mysqli_real_escape_string($conn, trim(stripslashes($_POST["address"])));
+$branch = mysqli_real_escape_string($conn, trim(stripslashes($_POST["branch"])));
+$acno = mysqli_real_escape_string($conn, trim(stripslashes($_POST["acno"])));
+$o_balance = mysqli_real_escape_string($conn, trim(stripslashes($_POST["o_balance"])));
+$pin = mysqli_real_escape_string($conn, trim(stripslashes($_POST["pin"])));
+$cus_uname = mysqli_real_escape_string($conn, trim(stripslashes($_POST["cus_uname"])));
+$cus_pwd = mysqli_real_escape_string($conn, trim(stripslashes($pass)));
 
 $sql0 = "SELECT MAX(cust_id) FROM customer";
 $result = $conn->query($sql0);
@@ -61,7 +67,7 @@ $sql2 = "CREATE TABLE beneficiary".$id."(
             PRIMARY KEY(benef_id)
         )";
 
-$sql3 = "INSERT INTO customer VALUES(
+$sql3 = "INSERT INTO customer (cust_id,first_name,last_name,gender,dob,aadhar_no,email,phone_no,address,branch,account_no,pin,uname,salt,pwd) VALUES(
             NULL,
             '$fname',
             '$lname',
@@ -75,6 +81,7 @@ $sql3 = "INSERT INTO customer VALUES(
             '$acno',
             '$pin',
             '$cus_uname',
+            '$salt',
             '$cus_pwd'
         )";
 
