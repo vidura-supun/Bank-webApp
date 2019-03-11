@@ -91,9 +91,9 @@
                           <button onclick="dropdown_func(<?php echo $i ?>)" class="dropbtn"></button>
                           <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                             <!--Pass the customer trans_id as a get variable in the link-->
-                            <a href="/edit_customer.php?cust_id=<?php echo $row["cust_id"] ?>">View / Edit</a>
-                            <a href="/transactions.php?cust_id=<?php echo $row["cust_id"] ?>">Transactions</a>
-                            <a href="/delete_customer.php?cust_id=<?php echo $row["cust_id"] ?>"
+                            <a href="edit_customer.php?cust_id=<?php echo $row["cust_id"] ?>">View / Edit</a>
+                            <a href="transactions.php?cust_id=<?php echo $row["cust_id"] ?>">Transactions</a>
+                            <a href="delete_customer.php?cust_id=<?php echo $row["cust_id"] ?>"
                                  onclick="return confirm('Are you sure?')">Delete</a>
                           </div>
                         </div>
@@ -107,7 +107,7 @@
             if ($back_button) { ?>
                 <div class="flex-container-bb">
                     <div class="back_button">
-                        <a href="/manage_customers.php" class="button">Go Back</a>
+                        <a href="manage_customers.php" class="button">Go Back</a>
                     </div>
                 </div>
             <?php }

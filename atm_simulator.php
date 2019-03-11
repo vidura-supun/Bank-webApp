@@ -21,7 +21,7 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Enter Amount (in INR) :</label><br>
+                <label>Enter Amount (in SLR) :</label><br>
                 <input name="amt" size="24" type="text" required />
             </div>
         </div>

@@ -33,7 +33,7 @@
             </p>
         </div>
         <div class="flex-item">
-            <a href="/home.php" class="button">Go Home</a>
+            <a href="home.php" class="button">Go Home</a>
         </div>
     </div>
 

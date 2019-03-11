@@ -150,13 +150,13 @@
 
         <div class="flex-container">
             <div class="container">
-                <a href="/customer_home.php" class="button">Home</a>
+                <a href="customer_home.php" class="button">Home</a>
             </div>
             <div class="container">
                 <button type="submit">Update</button>
             </div>
             <div class="container">
-                <a href="/pass_change.php" class="password-button">Change Password/PIN</a>
+                <a href="pass_change.php" class="password-button">Change Password/PIN</a>
             </div>
         </div>
 

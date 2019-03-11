@@ -42,7 +42,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="/beneficiary.php" class="button">Go to Transfer Funds</a>
+            <a href="beneficiary.php" class="button">Go to Transfer Funds</a>
         </div>
 
     </div>

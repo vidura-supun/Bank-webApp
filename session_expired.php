@@ -13,7 +13,7 @@
 <body>
     <div class="flex-container">
         <div class="flex-item">
-            <img id="session" src="/images/hourglass.png">
+            <img id="session" src="images/hourglass.png">
         </div>
         <div class="flex-item-message">
             <h1 id="session">Session Expired !</h1>
@@ -24,7 +24,7 @@
             </p>
         </div>
         <div class="flex-item">
-            <a href="/home.php" class="button">Go Home</a>
+            <a href="home.php" class="button">Go Home</a>
         </div>
     </div>
 

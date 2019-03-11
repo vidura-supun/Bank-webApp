@@ -46,7 +46,7 @@
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="/customer_home.php" class="button">Home</a>
+            <a href="customer_home.php" class="button">Home</a>
         </div>
 
     </div>

@@ -148,7 +148,7 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="/customer_add.php" class="button">Add Again</a>
+            <a href="customer_add.php" class="button">Add Again</a>
         </div>
 
     </div>

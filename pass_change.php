@@ -55,7 +55,7 @@
 
         <div class="flex-container">
             <div class="container">
-                <a href="/customer_profile.php" class="button">Go Back</a>
+                <a href="customer_profile.php" class="button">Go Back</a>
             </div>
             <div class="container">
                 <button type="submit">Submit</button>
