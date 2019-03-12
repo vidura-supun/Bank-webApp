@@ -13,8 +13,8 @@
         <a href="news.php">NEWS</a>
         <a href="customer_transactions.php">My Transactions</a>
         <a id="label">Send/Recieve</a>
-        <a href="beneficiary.php">Transfer Funds</a>
-        <a href="">Manage Benificiary</a>
+        <a href="transfer_funds.php">Transfer Funds</a>
+        <a href="beneficiary.php">Manage Benificiary</a>
         <a href="atm_simulator.php">ATM Simulator</a>
         <a id="label">Contact Us</a>
         <a href="#">Submit Griveance</a>

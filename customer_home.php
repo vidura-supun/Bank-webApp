@@ -48,7 +48,7 @@
                 <br>AC/No: <?php echo $row0["account_no"]; ?>
             </h1>
             <p id="customer">
-                &#9656 Balance (INR): <?php echo number_format($row1["balance"]); ?>/-
+                &#9656 Balance (LKR): <?php echo number_format($row1["balance"]); ?>/-
                 <br>&#9656 You have <?php echo $row2["COUNT(*)"]; ?> beneficiaries.
                 <br>&#9656 Your last transaction (<?php echo $type; ?>) of&nbspRs.&nbsp<?php
                 echo number_format($transaction); ?><br>
